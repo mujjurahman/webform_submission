@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * This module provides webform submission list.
+ */
+
+/**
+ * Implements hook_local_tasks_alter().
+ */
+function pfe_webform_submission_local_tasks_alter(&$local_tasks) {
+  if (isset($local_tasks['entity.webform.results_submissions'])) {
+    unset($local_tasks['entity.webform.results_submissions']);
+  }
+  if (isset($local_tasks['entity.webform.results'])) {
+    $local_tasks['entity.webform.results']['route_name'] = 'pfe_webform_submission.webform_submission';
+  }
+}

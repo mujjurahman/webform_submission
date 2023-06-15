@@ -1,0 +1,5 @@
+pfe_webform_submission.webform_submission:
+  title: 'Submissions'
+  route_name: pfe_webform_submission.webform_submission
+  parent_id: entity.webform.results
+  weight: 20

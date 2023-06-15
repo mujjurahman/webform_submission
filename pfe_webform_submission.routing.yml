@@ -1,0 +1,9 @@
+pfe_webform_submission.webform_submission:
+  path: '/admin/structure/webform/manage/{webform}/results/submission/list'
+  defaults:
+    _controller: '\Drupal\pfe_webform_submission\Controller\WebformSubmissions::content'
+    _title: 'Submissions'
+  requirements:
+    _permission: 'access webform submission list page'
+  options:
+    _admin_route: TRUE
